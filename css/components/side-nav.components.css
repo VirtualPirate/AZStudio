@@ -1,0 +1,82 @@
+.side-nav {
+  position: absolute;
+  width: clamp(100px, 70vw, 400px);
+  height: 100%;
+  background-color: #222;
+  transform: translateX(-400px);
+  transition: transform 500ms;
+  z-index: 1000;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  top: 0;
+
+  display: none;
+}
+
+.side-nav-sticky {
+  position: sticky;
+  height: 100vh;
+  top: 0%;
+}
+
+.close-side-nav-btn {
+  width: 4vw;
+
+  position: absolute;
+  top: 3%;
+  right: 8%;
+
+  fill: var(--primary-color);
+}
+
+.side-nav.show {
+  transform: translateX(0px);
+}
+
+.side-nav-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: clamp(100px, 70vw, 400px);
+  height: 100vh;
+  object-fit: cover;
+}
+
+.side-nav-items {
+  padding: 10vw 14vw;
+  font-size: 6vw;
+}
+
+.side-nav-items li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: fit-content;
+
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent 90%,
+    var(--primary-color) 90%,
+    var(--primary-color) 100%
+  );
+
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+
+  transition: background-size 300ms;
+
+  color: var(--primary-color);
+  text-shadow: 0 0 20px var(--primary-color);
+}
+
+.side-nav-items li:hover {
+  background-size: 100% 100%;
+  background-position-x: left;
+}
+
+@media (max-width: 600px) {
+  .side-nav {
+    display: block;
+  }
+}

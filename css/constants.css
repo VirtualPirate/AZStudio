@@ -1,0 +1,5 @@
+:root {
+  --primary-color: #60ff00;
+  --background: url(../../graphics/bg-gradient.png),
+    url(../../graphics/background-green.png);
+}
