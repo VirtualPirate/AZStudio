@@ -42,9 +42,10 @@ const strangeTheme = {
   subjectUp: "strange-up.png",
   subjectDown: "strange-down.png",
   color: "#60ff00",
-  backgroundImage: "background-green.png",
+  backgroundImage: "background-red.png",
   // backgroundImage: "background.png",
-  toggleTranslate: "translateX(90px)",
+  toggleTranslate: "translateX(165%)",
+  filter: "hue-rotate(130deg)",
 };
 
 const redTheme = {
@@ -53,9 +54,10 @@ const redTheme = {
   subjectUp: "red-subject-up.png",
   subjectDown: "red-subject-down.png",
   color: "#f0050d",
-  backgroundImage: "background-red.jpg",
+  backgroundImage: "background-red.png",
   // backgroundImage: "red-background.png",
   toggleTranslate: "translateX(0)",
+  filter: "none",
 };
 
 const themeAssets = {
@@ -77,39 +79,32 @@ function switchTheme() {
 
 toggleThemeBtn.addEventListener("click", () => {
   let assets = themeAssets[switchTheme()];
-  let animationElements = [];
 
   introBox.forEach((element) => {
     const animationElement = element.animate(
       introBoxAnimationFrames,
       reverseAnimationProperties(introBoxAnimationProperties)
     );
-    animationElements.push(animationElement);
-  });
 
-  root.style.setProperty(
-    "--background",
-    `url(../../graphics/bg-gradient.png),
-  url(../../graphics/${assets.backgroundImage})`
-  );
-
-  root.style.setProperty("--primary-color", assets.color);
-
-  console.log(animationElements);
-  animationElements.forEach((element) => {
-    element.onfinish = (e) => {
+    animationElement.onfinish = (e) => {
       boxStroke.src = introBoxDir(assets.box);
       glowBox.src = introBoxDir(assets.glow);
       subjectUp.src = introBoxDir(assets.subjectUp);
       subjectDown.src = introBoxDir(assets.subjectDown);
-      introBox.forEach((element) => {
-        element.animate(
-          getSlideAnimationFrames("right"),
-          introBoxAnimationProperties
-        );
-      });
+      const animationElement = element.animate(
+        getSlideAnimationFrames("right"),
+        introBoxAnimationProperties
+      );
+
+      animationElement.onfinish = () => {
+        if (element.classList.contains("subject"))
+          element.animate(floatAnimationFrames, floatAnimationProperties);
+      };
     };
   });
+
+  root.style.setProperty("--background-filter", assets.filter);
+  root.style.setProperty("--primary-color", assets.color);
 
   toggleThemeBtn.querySelector(".toggle-circle").style.transform =
     assets.toggleTranslate;

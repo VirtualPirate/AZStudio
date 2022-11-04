@@ -6,6 +6,6 @@ export const floatAnimationFrames = [
 
 export const floatAnimationProperties = {
   duration: 5000,
-  easing: "ease-in-out",
+  // easing: "ease-in-out",
   iterations: Infinity,
 };
