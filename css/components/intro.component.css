@@ -24,19 +24,32 @@
 
 .box-stroke {
   z-index: 1;
+  border: 3vw solid var(--primary-color);
+  box-shadow: 0 0 1vw 0.3vw var(--primary-color),
+    inset 0 0 1vw 0.3vw var(--primary-color);
 }
 
 .glow-box {
   z-index: 0;
+
+  box-shadow: 0 0 2vw var(--primary-color),
+    inset 0 0 50vw 2vw var(--primary-color);
 }
 
 .box {
   position: absolute;
 
-  top: -5vw;
-  left: 0;
+  top: 4vw;
+  left: 5vw;
 
-  width: 40vw;
+  height: 24vw;
+  width: 30vw;
+  border-radius: 2vw;
+  rotate: -35deg;
+
+  transition-property: border box-shadow;
+  transition-delay: 500ms;
+  /* width: 40vw; */
 
   /* animation: pop 1s cubic-bezier(0, 0, 0.28, 1) forwards; */
 }
@@ -71,10 +84,6 @@
   }
 }
 
-.float-subject {
-  /* animation: floatSubject 5s ease-in-out infinite; */
-}
-
 .subject {
   position: absolute;
   top: 0vw;
@@ -82,10 +91,6 @@
   width: 30vw;
 
   animation: floatSubject 5s ease-in-out infinite;
-}
-
-.box {
-  /* animation: pop 1s cubic-bezier(0, 0, 0.28, 1) forwards; */
 }
 
 .intro-wrapper {
@@ -173,14 +178,26 @@
 
   .box {
     /* width: 100vw; */
-    width: 80vw;
-    left: 10%;
+    top: 11vw;
+    left: 17vw;
+    height: 50vw;
+    width: 60vw;
+    border-width: 6vw;
+    border-radius: 6vw;
   }
 
   .glow-box {
+    box-shadow: 0 0 7vw var(--primary-color),
+      inset 0 0 100vw 7vw var(--primary-color);
+  }
+
+  .box-stroke {
+    box-shadow: 0 0 1.5vw 0.7vw var(--primary-color),
+      inset 0 0 1.5vw 0.7vw var(--primary-color);
   }
 
   .subject {
+    top: 0;
     width: 65vw;
     left: 20%;
   }
@@ -202,8 +219,11 @@
     height: 90vw;
   }
   .box {
-    width: 100vw;
-    left: 0;
+    top: 15vw;
+    width: 70vw;
+    height: 60vw;
+    left: 12vw;
+    border-width: 8vw;
   }
 
   .subject {

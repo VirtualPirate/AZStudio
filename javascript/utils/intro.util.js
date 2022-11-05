@@ -20,8 +20,8 @@ function reverseAnimationProperties(animationProperties) {
 // const introBoxAnimationFrames = popAnimationFrames;
 // const introBoxAnimationProperties = popAnimationProperties;
 
-const introBoxAnimationFrames = getSlideAnimationFrames("left");
-const introBoxAnimationProperties = slideAnimationProperties;
+const introBoxAnimationFrames = popAnimationFrames;
+const introBoxAnimationProperties = popAnimationProperties;
 
 const body = document.querySelector("body");
 const root = document.querySelector(":root");
@@ -31,14 +31,12 @@ const subjectUp = document.querySelector(".subject-up");
 const subjectDown = document.querySelector(".subject-down");
 const box = document.querySelectorAll(".box");
 const subject = document.querySelectorAll(".subject");
-const introBox = document.querySelectorAll(".intro-box img");
+const introBox = document.querySelectorAll(".intro-box *");
 const toggleThemeBtn = document.querySelector(".toggle-theme-btn");
 
 console.log(subjectUp.getAnimations());
 
 const strangeTheme = {
-  box: "strange-box.png",
-  glow: "green-glow.png",
   subjectUp: "strange-up.png",
   subjectDown: "strange-down.png",
   color: "#60ff00",
@@ -49,8 +47,6 @@ const strangeTheme = {
 };
 
 const redTheme = {
-  box: "red-box.png",
-  glow: "red-glow.png",
   subjectUp: "red-subject-up.png",
   subjectDown: "red-subject-down.png",
   color: "#f0050d",
@@ -87,12 +83,10 @@ toggleThemeBtn.addEventListener("click", () => {
     );
 
     animationElement.onfinish = (e) => {
-      boxStroke.src = introBoxDir(assets.box);
-      glowBox.src = introBoxDir(assets.glow);
       subjectUp.src = introBoxDir(assets.subjectUp);
       subjectDown.src = introBoxDir(assets.subjectDown);
       const animationElement = element.animate(
-        getSlideAnimationFrames("right"),
+        popAnimationFrames,
         introBoxAnimationProperties
       );
 

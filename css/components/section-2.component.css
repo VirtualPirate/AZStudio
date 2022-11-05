@@ -1,4 +1,5 @@
 .section-2 {
+  margin-top: 10vw;
   width: 100vw;
   height: 50vw;
   /* background-color: #00060d; */
@@ -8,21 +9,68 @@
 }
 
 .info-box {
-  height: 400px;
-  width: 500px;
-  background-color: rgba(59, 11, 33, 0.5);
-  border-radius: 20px;
-  border: var(--primary-color) 1px solid;
-  padding: 30px;
+  height: 25vw;
+  width: 25vw;
+  background-color: #111;
+  border-radius: 10px;
+  /* border: white 0.5px solid; */
+  padding: 25px;
 
-  box-shadow: 0 0 20px var(--primary-color);
+  /* box-shadow: 0 0 20px var(--primary-color); */
+  background-color: #222;
+}
+
+.info-box:hover {
+  /* box-shadow: 0 0 20px var(--primary-color); */
+  /* border: var(--primary-color) 1px solid;s */
 }
 
 .info-box-graphic {
   /* border: 1px solid var(--primary-color); */
   height: 60%;
   width: 100%;
+  border-radius: 10px 10px 0px 0px;
 
-  background: url(../../graphics/bhoot.jpg);
+  background: #111;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.info-box-graphic::before {
+  content: "";
+  /* background-image: url(../../graphics/photography.png); */
   background-size: cover;
+  opacity: 0.6;
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  border-radius: 10px;
+}
+
+.info-photo-nav::before {
+  background-image: url(../../graphics/photography.png);
+}
+
+.info-video-nav::before {
+  background-image: url(../../graphics/video_editing.png);
+}
+
+.info-box-graphic img {
+  width: 100%;
+  /* height: 5vw; */
+  z-index: 999;
+  border-radius: 10px;
+}
+
+.info-box-title {
+  width: 100%;
+  height: 40%;
+  border-radius: 0 0 10px 10px;
 }
