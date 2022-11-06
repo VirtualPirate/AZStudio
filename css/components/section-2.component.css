@@ -1,7 +1,7 @@
 .section-2 {
   margin-top: 10vw;
   width: 100vw;
-  height: 50vw;
+  /* height: 50vw; */
 
   display: flex;
   justify-content: space-around;
@@ -19,7 +19,7 @@
   flex-direction: column;
   border-radius: 12px;
   background-color: transparent;
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   box-shadow: 0 0 20px var(--primary-color);
 }
 
@@ -39,7 +39,7 @@
   align-items: center;
   position: relative;
 
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   box-shadow: 0 0 20px var(--primary-color);
 }
 
@@ -118,7 +118,7 @@
   }
 
   .info-box-title {
-    font-size: 45px;
+    font-size: 4vw;
   }
 
   .info-box-view-btn {
@@ -129,6 +129,10 @@
 
 @media (max-width: 600px) {
   .info-box {
+    height: 80vw;
+    width: 80vw;
+
+    box-shadow: 0 0 5px var(--primary-color);
   }
 
   .info-box-title {
