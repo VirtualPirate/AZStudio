@@ -95,7 +95,7 @@
 
 .intro-wrapper {
   height: 100%;
-  width: 38vw;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,7 +105,7 @@
 }
 
 .intro-heading {
-  font-size: 50px;
+  font-size: 3vw;
   font-weight: 800;
   letter-spacing: 0.3rem;
   color: var(--primary-color);
@@ -117,10 +117,10 @@
 
 .intro-text {
   line-height: 1.8;
-  font-size: 15px;
+  font-size: 1vw;
   /* text-align: center; */
   /* font-weight: 300; */
-  width: 35vw;
+  width: 50vw;
   text-transform: uppercase;
 }
 
