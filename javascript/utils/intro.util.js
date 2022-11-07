@@ -40,9 +40,7 @@ const strangeTheme = {
   subjectUp: "strange-up.png",
   subjectDown: "strange-down.png",
   color: "#60ff00",
-  backgroundImage: "background-red.png",
-  // backgroundImage: "background.png",
-  toggleTranslate: "translateX(165%)",
+  toggleTranslate: "translateX(0%)",
   filter: "hue-rotate(130deg)",
 };
 
@@ -50,9 +48,7 @@ const redTheme = {
   subjectUp: "red-subject-up.png",
   subjectDown: "red-subject-down.png",
   color: "#f0050d",
-  backgroundImage: "background-red.png",
-  // backgroundImage: "red-background.png",
-  toggleTranslate: "translateX(0)",
+  toggleTranslate: "translateX(165%)",
   filter: "none",
 };
 
@@ -65,7 +61,7 @@ function introBoxDir(src) {
   return `./graphics/${src}`;
 }
 
-let theme = "strange";
+let theme = "red";
 function switchTheme() {
   if (theme === "strange") theme = "red";
   else theme = "strange";

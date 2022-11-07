@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #60ff00;
-  --background-filter: hue-rotate(130deg);
+  --primary-color: #f0050d;
+  /* --background-filter: hue-rotate(130deg); */
   --background: url(../../graphics/background-red.png);
 }
