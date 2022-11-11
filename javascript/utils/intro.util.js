@@ -70,6 +70,7 @@ function switchTheme() {
 }
 
 toggleThemeBtn.addEventListener("click", () => {
+  body.classList.toggle("green-theme");
   let assets = themeAssets[switchTheme()];
 
   introBox.forEach((element) => {
@@ -92,9 +93,6 @@ toggleThemeBtn.addEventListener("click", () => {
       };
     };
   });
-
-  root.style.setProperty("--background-filter", assets.filter);
-  root.style.setProperty("--primary-color", assets.color);
 
   toggleThemeBtn.querySelector(".toggle-circle").style.transform =
     assets.toggleTranslate;
