@@ -29,7 +29,7 @@
   content: "";
   background-size: cover;
   opacity: 1;
-  filter: brightness(60%) var(--info-box-background-filter);
+  filter: blur(2px) brightness(60%) var(--info-box-background-filter);
 
   position: absolute;
   top: 0px;
