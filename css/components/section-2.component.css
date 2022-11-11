@@ -45,6 +45,7 @@
 
 .info-photo-box::before {
   background: url(./../../graphics/photo-editing.png);
+  background-position: 70% 0%;
 }
 .info-video-box::before {
   background: url(./../../graphics/video-editing.png);
@@ -111,8 +112,8 @@
 }
 
 .info-box-view-btn-logo {
-  width: 4vw;
-  height: 4vw;
+  width: 3vw;
+  height: 3vw;
   vertical-align: middle;
   fill: var(--primary-color);
   overflow: hidden;
@@ -138,8 +139,8 @@
   }
 
   .info-box-view-btn-logo {
-    width: 7vw;
-    height: 7vw;
+    width: 6vw;
+    height: 6vw;
   }
 }
 
@@ -174,7 +175,7 @@
   }
 
   .info-box-view-btn-logo {
-    width: 12vw;
-    height: 12vw;
+    width: 10vw;
+    height: 10vw;
   }
 }
