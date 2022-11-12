@@ -1,8 +1,5 @@
 .section-2 {
-  margin-top: 10vw;
   width: 100vw;
-  /* height: 50vw; */
-
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
