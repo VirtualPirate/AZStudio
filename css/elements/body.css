@@ -15,7 +15,9 @@ body {
   /* padding: 0 !important; */
   backdrop-filter: var(--background-filter);
   position: relative;
+}
 
+.main-content {
   display: flex;
   flex-direction: column;
   gap: 10vw;

@@ -1,8 +1,6 @@
 .gallery-section {
   display: flex;
   justify-content: center;
-
-  transform: translateY(-10vw);
 }
 
 .gallery-section .photo-editing-gallery {
@@ -67,6 +65,10 @@
 
   .gallery {
     gap: 10vw;
+  }
+
+  .gallery-section .photo-editing-gallery {
+    width: 95vw;
   }
 }
 

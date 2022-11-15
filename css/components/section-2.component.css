@@ -121,6 +121,9 @@
 }
 
 @media (max-width: 1000px) {
+}
+
+@media (max-width: 800px) {
   .section-2 {
     justify-content: center;
     gap: 5vw;
@@ -141,28 +144,11 @@
   }
 }
 
-@media (max-width: 800px) {
-  .info-box {
-    height: 70vw;
-    width: 70vw;
-    padding: 5vw;
-    gap: 5vw;
-  }
-
-  .info-box-title {
-    font-size: 6vw;
-  }
-
-  .info-box-view-btn-logo {
-    width: 9vw;
-    height: 9vw;
-  }
-}
-
 @media (max-width: 600px) {
   .info-box {
     height: 80vw;
     width: 80vw;
+    padding: 5vw;
 
     box-shadow: 0 0 5px var(--primary-color);
   }

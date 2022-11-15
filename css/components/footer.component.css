@@ -1,0 +1,156 @@
+footer {
+  display: flex;
+  width: 100%;
+  background-color: #000;
+  margin-top: 10vw;
+
+  justify-content: space-around;
+}
+
+.footer-social-info {
+  padding: 4vw 8vw;
+  /* background-color: white; */
+}
+
+.footer-social-info h1 {
+  font-size: 4vw;
+  margin-bottom: 3vw;
+}
+
+.social-logo {
+  width: 3vw;
+  filter: drop-shadow(0 0 10px var(--primary-color));
+}
+.social-logo-fill {
+  fill: var(--primary-color);
+}
+
+.social-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  width: fit-content;
+  margin-left: 5vw;
+}
+
+.social-info {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  padding: 1vw 2vw;
+
+  border: 0.2vw solid var(--primary-color);
+  border-radius: 1vw;
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.social-info span {
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+.footer-contact-info {
+  padding: 4vw 8vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.contact-info {
+  display: flex;
+  gap: 2vw;
+  padding: 1vw 2vw;
+  border: 0.2vw solid var(--primary-color);
+  border-radius: 1vw;
+
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+.contact-info-logo {
+  width: 6vw;
+  filter: drop-shadow(0 0 10px var(--primary-color));
+}
+
+.contact-logo-fill {
+  fill: var(--primary-color);
+}
+
+.contact-content {
+  display: flex;
+  gap: 1vw;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-name {
+  font-size: 2vw;
+  font-weight: bold;
+  width: 100%;
+  color: var(--primary-color);
+
+  padding-bottom: 0.3vw;
+  border-bottom: 0.1vw solid white;
+}
+
+.contact-value {
+  font-size: 1.3vw;
+}
+
+@media (max-width: 800px) {
+  .social-logo {
+    width: 4vw;
+  }
+
+  .social-info span {
+    font-size: 2vw;
+  }
+
+  .contact-info-logo {
+    width: 7vw;
+  }
+
+  .contact-name {
+    font-size: 3vw;
+  }
+
+  .contact-value {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+  }
+
+  .social-logo {
+    width: 6vw;
+  }
+
+  .social-info {
+    padding: 2vw 4vw;
+  }
+
+  .social-info span {
+    font-size: 4vw;
+  }
+
+  .contact-info {
+    padding: 2vw 4vw;
+    gap: 4vw;
+  }
+
+  .contact-info-logo {
+    width: 12vw;
+  }
+
+  .contact-name {
+    font-size: 5vw;
+  }
+
+  .contact-value {
+    font-size: 3.5vw;
+  }
+}
