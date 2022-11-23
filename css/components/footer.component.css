@@ -99,6 +99,9 @@ footer {
 }
 
 @media (max-width: 800px) {
+  .footer-social-info h1 {
+    font-size: 6vw;
+  }
   .social-logo {
     width: 4vw;
   }
@@ -125,12 +128,17 @@ footer {
     flex-direction: column;
   }
 
+  .footer-social-info h1 {
+    font-size: 7vw;
+  }
+
   .social-logo {
     width: 6vw;
   }
 
   .social-info {
     padding: 2vw 4vw;
+    gap: 4vw;
   }
 
   .social-info span {

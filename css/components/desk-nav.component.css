@@ -41,7 +41,7 @@
 }
 
 .nav-item {
-  padding: 10px 20px;
+  padding: 1vw 1.5vw;
   width: 93%;
   height: 93%;
   background-color: #111;
@@ -55,6 +55,9 @@
   transition-duration: 100ms;
 
   color: var(--primary-color) !important;
+
+  display: flex;
+  gap: 0.5vw;
 }
 
 @keyframes rotate360 {
@@ -70,7 +73,7 @@
   content: "";
   position: absolute;
   width: 150%;
-  height: 350%;
+  height: 450%;
   background-image: conic-gradient(
     var(--primary-color),
     var(--primary-color),

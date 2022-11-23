@@ -3,11 +3,11 @@
 body {
   background-image: var(--background);
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center 30%;
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 
   transition-property: backdrop-filter;
   transition-duration: 500ms;
@@ -15,6 +15,8 @@ body {
   /* padding: 0 !important; */
   backdrop-filter: var(--background-filter);
   position: relative;
+  width: 102%;
+  overflow-x: hidden;
 }
 
 .main-content {

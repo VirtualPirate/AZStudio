@@ -17,6 +17,29 @@
   position: sticky;
   height: 100vh;
   top: 0%;
+
+  background: url(../../graphics/side-nav-red.png);
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  /* filter: hs; */
+}
+
+.side-nav-content {
+  width: 100%;
+  height: 100%;
+
+  transition-property: backdrop-filter;
+  transition-duration: 500ms;
+
+  backdrop-filter: var(--background-filter);
+
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .close-side-nav-btn {
@@ -44,21 +67,26 @@
 }
 
 .side-nav-items {
+  margin-top: 20vw;
   padding: 10vw 14vw;
   font-size: 6vw;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .side-nav-items li {
   margin-bottom: 10px;
   cursor: pointer;
-  width: fit-content;
+  /* width: fit-content; */
 
-  background-image: linear-gradient(
-    transparent 0%,
-    transparent 90%,
-    var(--primary-color) 90%,
-    var(--primary-color) 100%
-  );
+  background: linear-gradient(
+      transparent 0%,
+      transparent 90%,
+      var(--primary-color) 90%,
+      var(--primary-color) 100%
+    )
+    black;
 
   background-repeat: no-repeat;
   background-size: 0% 100%;
@@ -68,6 +96,15 @@
 
   color: var(--primary-color);
   text-shadow: 0 0 20px var(--primary-color);
+
+  padding: 4vw 4vw;
+
+  text-align: center;
+  border-radius: 2vw;
+  border: 2px solid var(--primary-color);
+
+  display: flex;
+  gap: 2vw;
 }
 
 .side-nav-items li:hover {
